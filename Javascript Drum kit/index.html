@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Drum Kit</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="title">🥁 Drum Kit</h1>
+      <p class="subtitle">Press any key A - L to play a sound</p>
+
+      <div class="keys">
+        <div data-key="65" class="key">A<span class="sound">clap</span></div>
+        <div data-key="83" class="key">S<span class="sound">hihat</span></div>
+        <div data-key="68" class="key">D<span class="sound">kick</span></div>
+        <div data-key="70" class="key">F<span class="sound">openhat</span></div>
+        <div data-key="71" class="key">G<span class="sound">boom</span></div>
+        <div data-key="72" class="key">H<span class="sound">ride</span></div>
+        <div data-key="74" class="key">J<span class="sound">snare</span></div>
+        <div data-key="75" class="key">K<span class="sound">tom</span></div>
+        <div data-key="76" class="key">L<span class="sound">tink</span></div>
+      </div>
+    </div>
+
+    <!-- Audio files -->
+    <audio data-key="65" src="sounds/clap.wav"></audio>
+    <audio data-key="83" src="sounds/cat.mp3"></audio>
+    <audio data-key="68" src="sounds/blade.mp3"></audio>
+    <audio data-key="70" src="sounds/kick.mp3"></audio>
+    <audio data-key="71" src="sounds/snare.mp3"></audio>
+    <audio data-key="72" src="sounds/ton.mp3"></audio>
+    <audio data-key="74" src="sounds/kickdrum.mp3"></audio>
+    <audio data-key="75" src="sounds/distorted.mp3"></audio>
+    <audio data-key="76" src="sounds/drum.wav"></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
