@@ -1,0 +1,159 @@
+:root {
+  --day-bg: linear-gradient(135deg, #72EDF2 0%, #5151E5 100%);
+  --night-bg: linear-gradient(135deg, #0F2027 0%, #203A43 50%, #2C5364 100%);
+  --day-card: rgba(255, 255, 255, 0.2);
+  --night-card: rgba(0, 0, 0, 0.2);
+  --text-light: #ffffff;
+  --text-dark: #333333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--day-bg);
+  color: var(--text-light);
+  transition: background 0.5s ease;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body.night {
+  background: var(--night-bg);
+}
+
+.weather-card {
+  width: 100%;
+  max-width: 400px;
+  background: var(--day-card);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.night .weather-card {
+  background: var(--night-card);
+}
+
+.location {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.city {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.region {
+  opacity: 0.8;
+  margin-top: 5px;
+}
+
+.current-weather {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.temperature {
+  font-size: 4rem;
+  font-weight: 300;
+  position: relative;
+}
+
+.temp-unit {
+  position: absolute;
+  top: 0;
+  font-size: 1.5rem;
+  opacity: 0.7;
+}
+
+.weather-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.condition-text {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  text-transform: capitalize;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.detail-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detail-item i {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.detail-label {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.detail-value {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.unit-toggle {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.unit-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+
+.unit-btn.active {
+  background: rgba(255, 255, 255, 0.4);
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .weather-card {
+      padding: 20px;
+  }
+  
+  .city {
+      font-size: 1.5rem;
+  }
+  
+  .temperature {
+      font-size: 3rem;
+  }
+}
